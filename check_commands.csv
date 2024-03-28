@@ -1,3 +1,5 @@
-Elixir;docker ps | grep elixir-validator > /dev/null 2>&1 && echo 0 || echo 1
-Shardeum;docker ps | grep shardeum-dashboard > /dev/null 2>&1 && echo 0 || echo 1
-BEVM;docker ps | grep bevm-node > /dev/null 2>&1 && echo 0 || echo 1
+Elixir(docker);docker ps | grep elixir-validator > /dev/null 2>&1 && echo 0 || echo 1
+Shardeum(docker);docker ps | grep shardeum-dashboard > /dev/null 2>&1 && echo 0 || echo 1
+BEVM(docker);docker ps | grep bevm-node > /dev/null 2>&1 && echo 0 || echo 1
+Masa finance(docker);docker ps | grep masa-oracle-masa-node-1 > /dev/null 2>&1 && echo 0 || echo 1
+Masa finance(systemd);systemctl status masa | grep running > /dev/null 2>&1 && echo 0 || echo 1
