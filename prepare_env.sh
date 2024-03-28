@@ -60,14 +60,14 @@ function prepare_prometheus {
       - targets: ["localhost:19100"]
         labels:
           job: "nodes_ckecker"
-  '
+'
   #check if configuration already exists
   if grep -q "nodes_ckecker" $CONFIG_FILE; then
       echo "Configuration already exists in $CONFIG_FILE"
       return
   else
     if [ -f "$CONFIG_FILE" ]; then
-        echo "$SCRAPE_CONFIG" >> $CONFIG_FILE
+        echo "  $SCRAPE_CONFIG" >> $CONFIG_FILE
         echo "Configuration added to $CONFIG_FILE"
     else
         echo "Configuration file not found: $CONFIG_FILE"
