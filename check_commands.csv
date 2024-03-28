@@ -1,0 +1,3 @@
+Elixir;docker ps | grep elixir-validator > /dev/null 2>&1 && echo 0 || echo 1
+Shardeum;docker ps | grep shardeum-dashboard > /dev/null 2>&1 && echo 0 || echo 1
+BEVM;docker ps | grep bevm-node > /dev/null 2>&1 && echo 0 || echo 1
