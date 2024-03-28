@@ -54,12 +54,12 @@ function prepare_prometheus {
   CONFIG_FILE="/etc/prometheus/prometheus.yml"
 
   SCRAPE_CONFIG='
-    - job_name: "nodes_ckecker"
-      scrape_interval: 30s
-      static_configs:
-        - targets: ["localhost:19100"]
-          labels:
-            job: "nodes_ckecker"
+  - job_name: "nodes_ckecker"
+    scrape_interval: 30s
+    static_configs:
+      - targets: ["localhost:19100"]
+        labels:
+          job: "nodes_ckecker"
   '
   #check if configuration already exists
   if grep -q "nodes_ckecker" $CONFIG_FILE; then
