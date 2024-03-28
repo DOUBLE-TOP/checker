@@ -1,14 +1,14 @@
-Elixir(d);docker ps | grep elixir-validator > /dev/null 2>&1 && echo 0 || echo 1
-Shardeum(d);docker ps | grep shardeum-dashboard > /dev/null 2>&1 && echo 0 || echo 1
-BEVM(d);docker ps | grep bevm-node > /dev/null 2>&1 && echo 0 || echo 1
-Masa finance(d);docker ps | grep masa-oracle-masa-node-1 > /dev/null 2>&1 && echo 0 || echo 1
-Masa finance(s);systemctl status masa | grep running > /dev/null 2>&1 && echo 0 || echo 1
-Penumbra(w);pcli --version > /dev/null 2>&1 && echo 0 || echo 1
-Avail-light(s);systemctl status avail | grep running > /dev/null 2>&1 && echo 0 || echo 1
-Avail-full(s);systemctl status avail-full | grep running > /dev/null 2>&1 && echo 0 || echo 1
-Avail-full(s);systemctl status babylon | grep running > /dev/null 2>&1 && echo 0 || echo 1
-Casper(s);systemctl status casper-node-launcher | grep running > /dev/null 2>&1 && echo 0 || echo 1
-Celestia(s);systemctl status celestia-appd | grep running > /dev/null 2>&1 && echo 0 || echo 1
-DUSK(d);docker ps | grep rusk > /dev/null 2>&1 && echo 0 || echo 1
-Fleek(d);docker ps | grep lightning-node > /dev/null 2>&1 && echo 0 || echo 1
-Forta(s);systemctl status forta | grep running > /dev/null 2>&1 && echo 0 || echo 1
+Elixir(d);docker ps | grep elixir-validator > /dev/null 2>&1 && exit 0 || exit 1
+Shardeum(d);docker ps | grep shardeum-dashboard > /dev/null 2>&1 && exit 0 || exit 1
+BEVM(d);docker ps | grep bevm-node > /dev/null 2>&1 && exit 0 || exit 1
+Masa finance(d);docker ps | grep masa-oracle-masa-node-1 > /dev/null 2>&1 && exit 0 || exit 1
+Masa finance(s);systemctl status masa | grep running > /dev/null 2>&1 && exit 0 || exit 1
+Penumbra(w);pcli --version > /dev/null 2>&1 && exit 0 || exit 1
+Avail-light(s);systemctl status avail | grep running > /dev/null 2>&1 && exit 0 || exit 1
+Avail-full(s);systemctl status avail-full | grep running > /dev/null 2>&1 && exit 0 || exit 1
+Avail-full(s);systemctl status babylon | grep running > /dev/null 2>&1 && exit 0 || exit 1
+Casper(s);systemctl status casper-node-launcher | grep running > /dev/null 2>&1 && exit 0 || exit 1
+Celestia(s);systemctl status celestia-appd | grep running > /dev/null 2>&1 && exit 0 || exit 1
+DUSK(d);docker ps | grep rusk > /dev/null 2>&1 && exit 0 || exit 1
+Fleek(d);docker ps | grep lightning-node > /dev/null 2>&1 && exit 0 || exit 1
+Forta(s);systemctl status forta | grep running > /dev/null 2>&1 && exit 0 || exit 1
