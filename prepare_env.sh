@@ -67,7 +67,7 @@ function prepare_prometheus {
       return
   else
     if [ -f "$CONFIG_FILE" ]; then
-        echo "  $SCRAPE_CONFIG" >> $CONFIG_FILE
+        sudo echo "  $SCRAPE_CONFIG" >> $CONFIG_FILE
         echo "Configuration added to $CONFIG_FILE"
     else
         echo "Configuration file not found: $CONFIG_FILE"
