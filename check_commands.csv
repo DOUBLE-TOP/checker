@@ -1,5 +1,6 @@
 Elixir(d);docker ps | grep ev > /dev/null 2>&1 && exit 0 || exit 1
 Shardeum(d);docker ps | grep shardeum-dashboard > /dev/null 2>&1 && exit 0 || exit 1
+Subspace(d);docker ps | grep subspace > /dev/null 2>&1 && exit 0 || exit 1
 BEVM(d);docker ps | grep bevm-node > /dev/null 2>&1 && exit 0 || exit 1
 BoolNetwork(d);docker ps | grep boolnetwork > /dev/null 2>&1 && exit 0 || exit 1
 Masa finance(d);docker ps | grep masa-oracle-masa-node-1 > /dev/null 2>&1 && exit 0 || exit 1
