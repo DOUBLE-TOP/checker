@@ -31,7 +31,7 @@ function prepare_python_env {
 function create_systemd {
   sudo tee <<EOF >/dev/null /etc/systemd/system/checker.service
 [Unit]
-Description=Avail Node
+Description=Checker
 After=network-online.target
 StartLimitIntervalSec=0
 [Service]
