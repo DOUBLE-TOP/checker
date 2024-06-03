@@ -1,5 +1,17 @@
 #!/bin/bash 
 
+function create_checker_user {
+  if id "checker" &>/dev/null; then
+    echo "User checker already exists"
+  else
+    echo "Creating user checker"
+    sudo useradd -m -s /bin/bash checker
+  fi
+
+  echo "Adding checker to docker group"
+  sudo usermod -aG docker checker
+}
+
 function src_git_repo {
   #check if directory exists
   if [ -d "$HOME/checker" ]; then
@@ -35,7 +47,7 @@ Description=Checker
 After=network-online.target
 StartLimitIntervalSec=0
 [Service]
-User=$USER
+User=checker
 Restart=always
 RestartSec=3
 LimitNOFILE=65535
