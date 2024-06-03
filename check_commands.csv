@@ -15,4 +15,6 @@ DUSK(d);docker ps | grep rusk > /dev/null 2>&1 && exit 0 || exit 1
 Fleek(d);docker ps | grep lightning-node > /dev/null 2>&1 && exit 0 || exit 1
 Forta(s);systemctl status forta | grep running > /dev/null 2>&1 && exit 0 || exit 1
 0G(s);systemctl status 0g | grep running > /dev/null 2>&1 && exit 0 || exit 1
+0G-storage(s);systemctl status 0g_storage | grep running > /dev/null 2>&1 && exit 0 || exit 1
+Initia(s);systemctl status initia | grep running > /dev/null 2>&1 && exit 0 || exit 1
 Frame(d);docker ps | grep frame > /dev/null 2>&1 && exit 0 || exit 1
