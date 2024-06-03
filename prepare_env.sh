@@ -90,6 +90,7 @@ function prepare_prometheus {
 }
 
 function main {
+  create_checker_user
   src_git_repo
   prepare_python_env
   create_systemd
