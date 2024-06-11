@@ -48,7 +48,7 @@ function prepare_python_env {
     sudo -u checker bash << EOF
     source /home/checker/venv/bin/activate
     pip install -r /home/checker/checker/requirements.txt
-    EOF
+EOF
   fi
 
 }
