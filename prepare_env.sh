@@ -32,11 +32,23 @@ function prepare_python_env {
     return
   else
     cd /home/checker
-    echo "venv does not exist, installing requirements"
-    sudo apt-get install python3-venv -y
-    python3 -m venv venv
-    source venv/bin/activate
-    pip3 install -r requirements.txt
+    
+    # Проверяем наличие виртуального окружения
+    if [ ! -d "venv" ]; then
+        echo "venv does not exist, installing requirements"
+        
+        # Устанавливаем python3-venv
+        sudo apt-get install python3-venv -y
+        
+        # Создаем виртуальное окружение от пользователя checker
+        sudo -u checker python3 -m venv venv
+    fi
+    
+    # Активируем виртуальное окружение и устанавливаем зависимости от пользователя checker
+    sudo -u checker bash << EOF
+    source /home/checker/venv/bin/activate
+    pip install -r /home/checker/requirements.txt
+    EOF
   fi
 
 }
