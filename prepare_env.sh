@@ -29,6 +29,10 @@ function src_git_repo {
 function prepare_python_env {
   if [ -d "/home/checker/venv" ]; then
     echo "venv exists, it's ok"
+    sudo -u checker bash << EOF
+    source /home/checker/venv/bin/activate
+    pip install -r /home/checker/checker/requirements.txt
+EOF
     return
   else
     cd /home/checker
