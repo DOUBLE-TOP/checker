@@ -65,7 +65,6 @@ Restart=always
 RestartSec=3
 LimitNOFILE=65535
 ExecStart=/home/checker/venv/bin/python3 /home/checker/checker/checker.py
-WorkingDirectory=$HOME/checker
 [Install]
 WantedBy=multi-user.target
 EOF
