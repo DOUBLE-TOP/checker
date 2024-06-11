@@ -27,10 +27,11 @@ function src_git_repo {
 }
 
 function prepare_python_env {
-  if [ -d "$HOME/checker/venv" ]; then
+  if [ -d "/home/checker/venv" ]; then
     echo "venv exists, it's ok"
     return
   else
+    cd /home/checker
     echo "venv does not exist, installing requirements"
     sudo apt-get install python3-venv -y
     python3 -m venv venv
@@ -51,7 +52,7 @@ User=checker
 Restart=always
 RestartSec=3
 LimitNOFILE=65535
-ExecStart=$HOME/checker/venv/bin/python3 $HOME/checker/checker.py
+ExecStart=/home/checker/venv/bin/python3 $HOME/checker/checker.py
 WorkingDirectory=$HOME/checker
 [Install]
 WantedBy=multi-user.target
