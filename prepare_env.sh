@@ -14,14 +14,14 @@ function create_checker_user {
 
 function src_git_repo {
   #check if directory exists
-  if [ -d "$HOME/checker" ]; then
+  if [ -d "/home/checker/checker" ]; then
     echo "checker exists, pulling latest changes"
-    cd $HOME/checker
+    cd /home/checker/checker
     git pull
   else
     echo "checker does not exist, cloning repo"
-    git clone https://github.com/DOUBLE-TOP/checker/ $HOME/checker
-    cd $HOME/checker
+    git clone https://github.com/DOUBLE-TOP/checker/ /home/checker/checker
+    cd /home/checker/checker
   fi
 
 }
@@ -47,7 +47,7 @@ function prepare_python_env {
     # Активируем виртуальное окружение и устанавливаем зависимости от пользователя checker
     sudo -u checker bash << EOF
     source /home/checker/venv/bin/activate
-    pip install -r /home/checker/requirements.txt
+    pip install -r /home/checker/checker/requirements.txt
     EOF
   fi
 
@@ -64,7 +64,7 @@ User=checker
 Restart=always
 RestartSec=3
 LimitNOFILE=65535
-ExecStart=/home/checker/venv/bin/python3 $HOME/checker/checker.py
+ExecStart=/home/checker/venv/bin/python3 /home/checker/checker/checker.py
 WorkingDirectory=$HOME/checker
 [Install]
 WantedBy=multi-user.target
