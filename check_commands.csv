@@ -18,3 +18,4 @@ Forta(s);systemctl status forta | grep running > /dev/null 2>&1 && exit 0 || exi
 0G-storage(s);systemctl status 0g_storage | grep running > /dev/null 2>&1 && exit 0 || exit 1
 Initia(s);systemctl status initia | grep running > /dev/null 2>&1 && exit 0 || exit 1
 Frame(d);docker ps | grep frame > /dev/null 2>&1 && exit 0 || exit 1
+Nubit(d);docker ps | grep nubit > /dev/null 2>&1 && exit 0 || exit 1
