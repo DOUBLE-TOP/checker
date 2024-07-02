@@ -5,7 +5,6 @@ BEVM(d);docker ps | grep bevm-node > /dev/null 2>&1 && exit 0 || exit 1
 BoolNetwork(d);docker ps | grep boolnetwork > /dev/null 2>&1 && exit 0 || exit 1
 Masa finance(d);docker ps | grep masa-oracle-masa-node-1 > /dev/null 2>&1 && exit 0 || exit 1
 Masa finance(s);systemctl status masa | grep running > /dev/null 2>&1 && exit 0 || exit 1
-Penumbra(w);pcli --version > /dev/null 2>&1 && exit 0 || exit 1
 Avail-light(s);systemctl status avail | grep running > /dev/null 2>&1 && exit 0 || exit 1
 Avail-full(s);systemctl status avail-full | grep running > /dev/null 2>&1 && exit 0 || exit 1
 Avail-full(s);systemctl status babylon | grep running > /dev/null 2>&1 && exit 0 || exit 1
