@@ -19,3 +19,4 @@ Forta(s);systemctl status forta | grep running > /dev/null 2>&1 && exit 0 || exi
 Initia(s);systemctl status initia | grep running > /dev/null 2>&1 && exit 0 || exit 1
 Frame(d);docker ps | grep frame > /dev/null 2>&1 && exit 0 || exit 1
 Nubit(d);docker ps | grep nubit > /dev/null 2>&1 && exit 0 || exit 1
+Waku(d);docker ps | grep nwaku-compose-nwaku-1 > /dev/null 2>&1 && exit 0 || exit 1
