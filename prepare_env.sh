@@ -17,10 +17,11 @@ function src_git_repo {
   if [ -d "/home/checker/checker" ]; then
     echo "checker exists, pulling latest changes"
     cd /home/checker/checker
-    git pull
+    sudo -u checker git pull
   else
     echo "checker does not exist, cloning repo"
-    git clone https://github.com/DOUBLE-TOP/checker/ /home/checker/checker
+    sudo -u checker mkdir -p /home/checker/checker
+    sudo -u checker git clone https://github.com/DOUBLE-TOP/checker/ /home/checker/checker
     cd /home/checker/checker
   fi
 
